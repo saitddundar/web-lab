@@ -1,34 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
+/**
+ * Main Application Component
+ * Displays student information and project meta-data for LAB-1.
+ */
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app-wrapper">
+      <main className="container">
+        <header className="header">
+          <h1>Web Design & Programming</h1>
+          <p className="subtitle">Laboratory Assignment Series</p>
+        </header>
+
+        <section className="profile-card">
+          <h2>Student Information</h2>
+          <div className="info-grid">
+            <div className="info-item">
+              <span className="label">Full Name</span>
+              <span className="value">Mehmet Sait Dündar</span>
+            </div>
+            <div className="info-item">
+              <span className="label">Student ID</span>
+              <span className="value">235541027</span>
+            </div>
+            <div className="info-item">
+              <span className="label">Assignment</span>
+              <span className="value">LAB-1</span>
+            </div>
+          </div>
+        </section>
+
+        <footer className="footer">
+          <p className="status-text">Environment Setup & Project Initialization</p>
+          <div className="status-badge">Completed</div>
+        </footer>
+      </main>
+    </div>
   )
 }
 
