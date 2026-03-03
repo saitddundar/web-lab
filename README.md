@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# Web Design and Programming - Laboratory Assignments
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my laboratory assignments repository for the **Web Design and Programming** course. This project is built using modern web technologies and follows a structured development workflow.
 
-Currently, two official plugins are available:
+## Student Information
+- **Name:** Mehmet Sait Dündar
+- **Student ID:** 235541027
+- **Course:** Web Design & Programming
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+##  LAB-1: Environment Setup & Project Initialization
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Objectives
+- Set up a professional development environment (Node.js, VS Code, Git).
+- Initialize a modern web project using **Vite** with **React** and **TypeScript**.
+- Implement a basic UI displaying student credentials.
+- Establishing a Git flow with feature branching.
 
-## Expanding the ESLint configuration
+### Tech Stack
+- **Framework:** React 19
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** Vanilla CSS (Modern Design System)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Getting Started
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
+```text
+web-lab/
+├── src/
+│   ├── App.tsx       # Main Application Component
+│   ├── App.css       # Professional Styling
+│   └── main.tsx      # Entry Point
+├── public/           # Static Assets
+└── README.md         # Project Documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Git Workflow
+- All changes are implemented in feature branches (e.g., `feature/initial-setup`).
+- Meaningful commit messages following professional standards.
+- Merged into `main` after completion of laboratory requirements.
